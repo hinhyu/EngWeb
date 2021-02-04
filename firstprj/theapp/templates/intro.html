@@ -8,7 +8,14 @@
 </head>
 <body>
     {% block content %}
-    <title>INTRO</title>
     {% endblock content%}
+
+    {% for article in article.all %}
+        <div class="container">
+            <h1>{{article.title}}</h1>
+            <p>{{article.body}}</p>
+            <p>{{article.date}}</p>
+        </div>
+    {% endfor %}
 </body>
 </html>
